@@ -7,10 +7,12 @@ export const Register = () => {
     const firstName = useRef()
     const lastName = useRef()
     const username = useRef()
-    const bio = useRef()
+    const accountType = useRef()
     const password = useRef()
+    const position = useRef()
     const verifyPassword = useRef()
     const passwordDialog = useRef()
+    const email = useRef()
     const navigate = useNavigate()
 
     const handleRegister = (e) => {
@@ -21,8 +23,10 @@ export const Register = () => {
                 "username": username.current.value,
                 "first_name": firstName.current.value,
                 "last_name": lastName.current.value,
-                "bio": bio.current.value,
-                "password": password.current.value
+                "account_type": accountType.current.value,
+                "password": password.current.value,
+                "email": email.current.value,
+                "position": position.current.value
             }
 
             registerUser(newUser)
@@ -68,8 +72,24 @@ export const Register = () => {
                     <input ref={verifyPassword} type="password" name="verifyPassword" className="form-control" placeholder="Verify password" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="verifyPassword"> Verify Password </label>
-                    <textarea ref={bio} name="bio" className="form-control" placeholder="Let other gamers know a little bit about you..." />
+                <label htmlFor="accountType">Account Type</label>
+                <select ref={accountType} name="accountType" className="form-control">
+                    <option value="employee">Employee</option>
+                </select>
+                </fieldset>
+
+                <fieldset>
+                <label htmlFor="position">Position</label>
+                <select ref={position} name="position" className="form-control">
+                    <option value="Dentist">Dentist</option>
+                    <option value="Surgeon">Surgeon</option>
+                    <option value="Physician">Physician</option>
+                </select>
+                </fieldset>
+
+                <fieldset>
+                    <label htmlFor="email"> email </label>
+                    <textarea ref={email} name="email" className="form-control" placeholder="Enter your email" />
                 </fieldset>
                 <fieldset style={{
                     textAlign: "center"
