@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useNavigate } from 'react-router-dom'
 import { createAppointments, getAppointments } from '../../managers/AppointmentManager.js'
 import { getSymptoms } from "../../managers/SymptomManager.js"
+import "./AppointmentForm.css"
 
 
 
@@ -14,7 +15,6 @@ export const AppointmentForm = () => {
     */
     const [currentAppointment, setCurrentAppointment] = useState({
         customer: 0,
-        employee: 0,
         description: "",
         symptom_type: 1,
         date: ""
@@ -42,10 +42,10 @@ export const AppointmentForm = () => {
 
 
     return (
-        <form className="gameForm">
-            <h2 className="gameForm__title">Register New Event</h2>
+        <form className="AllFormInputs">
+            <h2 className="RegisterTitle">Register a new Appointment</h2>
             <fieldset>
-                <div className="form-group">
+                <div className="RegisterForms">
                     <label htmlFor="date">Date: </label>
                     <input type="date" name="date" required className="form-control"
                         value={currentAppointment.date}
@@ -54,7 +54,7 @@ export const AppointmentForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="RegisterForms">
                     <label htmlFor="description"> Description </label>
                     <input type="text" name="description" required className="form-control"
                         value={currentAppointment.description}
@@ -64,7 +64,7 @@ export const AppointmentForm = () => {
             </fieldset>
 
             <fieldset>
-                <div className="form-group">
+                <div className="RegisterForms">
                     <label htmlFor="category" className="label-bold subtitle">
                         Symptom Type:
                     </label>
@@ -95,7 +95,6 @@ export const AppointmentForm = () => {
 
                     const event = {
                         customer: parseInt(currentAppointment.customer),
-                        employee: parseInt(currentAppointment.employee),
                         description: currentAppointment.description,
                         symptom_type: currentAppointment.symptom_type,
                         date: currentAppointment.date
@@ -106,7 +105,7 @@ export const AppointmentForm = () => {
                     createAppointments(event)
                         .then(() => navigate("/appointments"))
                 }}
-                className="btn btn-primary">Create</button>
+                className="CreateButton">Create</button>
         </form>
     )
 }

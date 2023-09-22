@@ -1,0 +1,85 @@
+/* Style the appointments section */
+.appointments {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(45deg, #2c3e50, #34495e); /* Gradient background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Bigger shadow effect */
+    color: #fff; /* White text color */
+}
+
+/* Style the RegisterButton */
+.RegisterButton {
+    background-color: #3498db; /* Badass blue */
+    color: #fff;
+    padding: 15px 30px; /* Larger button padding */
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px; /* Larger font size */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+.RegisterButton:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight button scale on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Bigger shadow on hover */
+}
+
+/* Style the individual appointment */
+.appointment {
+    border: 2px solid #666; /* Darker border */
+    padding: 15px; /* Larger padding */
+    margin: 15px 0; /* Bigger margin */
+    background: linear-gradient(45deg, #34495e, #2c3e50); /* Gradient background */
+    border-radius: 10px;
+    transition: transform 0.2s; /* Smooth scale transition */
+}
+
+.appointment:hover {
+    transform: scale(1.02); /* Slight scale on hover */
+}
+
+/* Style the appointment title */
+.appointment__title {
+    font-weight: bold;
+    color: #fff; /* White text color */
+}
+
+/* Style the deleteButton */
+.deleteButton {
+    background-color: #e74c3c; /* Badass red */
+    color: #fff;
+    padding: 10px 20px; /* Larger button padding */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; /* Larger font size */
+    margin-right: 20px; /* More space */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+.deleteButton:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: scale(1.05); /* Slight button scale on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Bigger shadow on hover */
+}
+
+/* Style the general button */
+button {
+    background-color: #27ae60; /* Badass green */
+    color: #fff;
+    padding: 10px 20px; /* Larger button padding */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; /* Larger font size */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #219952; /* Darker green on hover */
+    transform: scale(1.05); /* Slight button scale on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Bigger shadow on hover */
+}

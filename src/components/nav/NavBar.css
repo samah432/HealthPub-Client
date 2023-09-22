@@ -1,10 +1,54 @@
-.navbar {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: left;
-}
+/* NavBar.css */
 
-.navbar__item {
-    flex-basis: 20%;
-    list-style-type: none;
-}
+.navbar {
+    list-style: none;
+    display: flex;
+    background: linear-gradient(45deg, #2c3e50, #34495e); /* Gradient background */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Bigger shadow effect */
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar__item {
+    margin-right: 20px;
+  }
+  
+  .nav-link-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #3498db; /* Badass blue */
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px; /* Larger font size */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+  }
+  
+  .nav-link-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight button scale on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Bigger shadow on hover */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px; /* Larger font size */
+  }
+  
+  .fakeLink {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e74c3c; /* Badass red */
+    font-size: 16px; /* Larger font size */
+    transition: color 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+  }
+  
+  .fakeLink:hover {
+    color: #c0392b; /* Darker red on hover */
+    transform: scale(1.05); /* Slight button scale on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Bigger shadow on hover */
+  }
+  

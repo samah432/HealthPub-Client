@@ -1,0 +1,69 @@
+/* In your global CSS file (e.g., styles.css) */
+
+/* Set the background color of the entire site */
+body {
+    background-color: #fceed1;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; /* Text color */
+}
+
+/* Style the UpdateForm */
+.AppointmentForm {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222; /* Dark background color */
+    border: 1px solid #555; /* Dark border */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.AppointmentTitle {
+    text-align: center;
+    font-size: 32px; /* Larger title */
+    color: #fff; /* White text color */
+    margin-bottom: 20px;
+}
+
+/* Style form categories and labels */
+.formCategories {
+    margin-bottom: 20px; /* Bigger spacing */
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    color: #fff; /* White label text */
+}
+
+/* Style form controls */
+.form-control {
+    width: 100%;
+    padding: 12px; /* Larger input padding */
+    border: 1px solid #666; /* Darker input border */
+    border-radius: 8px;
+    background-color: #333; /* Dark input background */
+    color: #fff; /* White text color */
+}
+
+.select {
+    height: 50px; /* Taller select input */
+}
+
+/* Style the UpdateButton */
+.UpdateButton {
+    background-color: #ff6b6b; /* Badass red */
+    color: #fff;
+    padding: 15px 30px; /* Larger button padding */
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px; /* Larger font size */
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.UpdateButton:hover {
+    background-color: #ff3333; /* Darker red on hover */
+}

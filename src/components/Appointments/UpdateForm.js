@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useNavigate, useParams } from 'react-router-dom'
 import { getAppointments, updateAppointments, getAppointmentById } from '../../managers/AppointmentManager.js'
 import { getSymptoms } from "../../managers/SymptomManager.js"
+import './UpdateForm.css';
 
 
 
@@ -51,10 +52,10 @@ export const UpdateForm = () => {
         return null
     }
     return (
-        <form className="gameForm">
-            <h2 className="gameForm__title">Update Appointment</h2>
+        <form className="AppointmentForm">
+            <h2 className="AppointmentTitle">Update Appointment</h2>
             <fieldset>
-                <div className="form-group">
+                <div className="formCategories">
                     <label htmlFor="date">Date: </label>
                     <input type="date" name="date" required className="form-control"
                         value={currentAppointment.date}
@@ -63,7 +64,7 @@ export const UpdateForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="formCategories">
                     <label htmlFor="description"> Description </label>
                     <input type="text" name="description" required className="form-control"
                         value={currentAppointment.description}
@@ -73,8 +74,8 @@ export const UpdateForm = () => {
             </fieldset>
 
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="category" className="label-bold subtitle">
+                <div className="formCategories">
+                    <label htmlFor="category" className="label-bold form-control">
                         Symptom Type:
                     </label>
                     <select
@@ -116,7 +117,7 @@ export const UpdateForm = () => {
                     updateAppointments(event)
                         .then(() => navigate("/appointments"))
                 }}
-                className="btn btn-primary">Update</button>
+                className="UpdateButton">Update</button>
         </form>
     )
 }
